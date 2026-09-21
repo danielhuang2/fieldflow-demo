@@ -1386,7 +1386,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     #fieldflow-phone-demo h1,
     #fieldflow-phone-demo h2,
     #fieldflow-phone-demo p { margin: 0; }
-    #fieldflow-phone-demo h1 { font-size: 21px; font-weight: 500; letter-spacing: -.025em; margin-top: 2px; }
+    #fieldflow-phone-demo h1 { font-size: 22px; font-weight: 500; letter-spacing: -.025em; margin-top: 2px; }
     #fieldflow-phone-demo .fp-icon-button {
       align-items: center;
       background: var(--fp-surface);
@@ -1401,23 +1401,50 @@ html&gt;body{padding:0}&lt;/style&gt;
     #fieldflow-phone-demo .fp-icon-button svg { height: 18px; width: 18px; }
     #fieldflow-phone-demo .fp-main { display: grid; gap: 13px; padding: 0 14px 92px; }
     #fieldflow-phone-demo .fp-alert {
+      align-items: center;
       background: var(--fp-danger-soft);
       border: 1px solid color-mix(in srgb, var(--fp-danger) 23%, transparent);
       border-radius: var(--fp-card-radius, 17px);
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr 104px;
       padding: 15px;
     }
     #fieldflow-phone-demo .fp-alert-top { align-items: center; display: flex; gap: 8px; }
     #fieldflow-phone-demo .fp-alert-top svg { color: var(--fp-danger); height: 17px; width: 17px; }
     #fieldflow-phone-demo .fp-alert-title { font-size: 13px; font-weight: 500; }
     #fieldflow-phone-demo .fp-alert-number {
-      color: var(--fp-danger);
-      font-size: 31px;
-      font-variant-numeric: tabular-nums;
+      color: var(--fp-ink);
+      font-size: 34px;
       font-weight: 500;
       letter-spacing: -.035em;
       margin-top: 9px;
     }
     #fieldflow-phone-demo .fp-alert-copy { color: var(--fp-muted); font-size: 12px; line-height: 1.45; margin-top: 3px; }
+    #fieldflow-phone-demo .fp-gap-orbit {
+      --covered: 54%;
+      align-items: center;
+      aspect-ratio: 1;
+      background: conic-gradient(var(--fp-accent) 0 var(--covered), color-mix(in srgb, var(--fp-danger) 72%, transparent) var(--covered) 100%);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      padding: 9px;
+    }
+    #fieldflow-phone-demo .fp-gap-center {
+      align-items: center;
+      background: var(--fp-surface);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
+    #fieldflow-phone-demo .fp-gap-center svg { color: var(--fp-danger); height: 17px; margin-bottom: 2px; width: 17px; }
+    #fieldflow-phone-demo .fp-gap-center strong { font-size: 14px; font-variant-numeric: tabular-nums; font-weight: 500; }
+    #fieldflow-phone-demo .fp-gap-center span { color: var(--fp-muted); font-size: 9px; }
     #fieldflow-phone-demo .fp-chart-card,
     #fieldflow-phone-demo .fp-month-card {
       background: var(--fp-surface);
@@ -1435,8 +1462,22 @@ html&gt;body{padding:0}&lt;/style&gt;
       font-weight: 500;
       padding: 5px 8px;
     }
-    #fieldflow-phone-demo .fp-chart-wrap { height: 184px; padding: 0 4px; }
-    #fieldflow-phone-demo #fp-chart { display: block; height: 184px; width: 100%; }
+    #fieldflow-phone-demo .fp-chart-wrap { height: 168px; padding: 0 4px; }
+    #fieldflow-phone-demo #fp-chart { display: block; height: 168px; width: 100%; }
+    #fieldflow-phone-demo .fp-seasons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0 12px 9px;
+    }
+    #fieldflow-phone-demo .fp-season {
+      align-items: center;
+      color: var(--fp-muted);
+      display: flex;
+      flex-direction: column;
+      font-size: 9px;
+      gap: 2px;
+    }
+    #fieldflow-phone-demo .fp-season svg { height: 14px; width: 14px; }
     #fieldflow-phone-demo .fp-selected {
       align-items: center;
       background: var(--fp-surface-2);
@@ -1457,9 +1498,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     #fieldflow-phone-demo .fp-mini-label { color: var(--fp-muted); font-size: 10px; text-align: right; text-transform: uppercase; }
     #fieldflow-phone-demo .fp-mini-value { font-size: 14px; font-variant-numeric: tabular-nums; font-weight: 500; margin-top: 2px; text-align: right; }
     #fieldflow-phone-demo .fp-divider { border: 0; border-top: 1px solid var(--fp-line); margin: 12px 0; }
-    #fieldflow-phone-demo .fp-breakdown { display: grid; gap: 8px; grid-template-columns: 1fr 1fr 1fr; }
-    #fieldflow-phone-demo .fp-breakdown-label { color: var(--fp-muted); font-size: 10px; }
-    #fieldflow-phone-demo .fp-breakdown-value { font-size: 12px; font-variant-numeric: tabular-nums; font-weight: 500; margin-top: 2px; }
+    #fieldflow-phone-demo .fp-breakdown { display: grid; gap: 7px; grid-template-columns: 1fr 1fr 1fr; }
+    #fieldflow-phone-demo .fp-money-block { background: var(--fp-surface-2); border-radius: 11px; padding: 9px 8px; }
+    #fieldflow-phone-demo .fp-money-icon { align-items: center; background: var(--fp-accent-soft); border-radius: 50%; color: var(--fp-accent); display: flex; height: 25px; justify-content: center; margin-bottom: 7px; width: 25px; }
+    #fieldflow-phone-demo .fp-money-icon.is-out { background: var(--fp-danger-soft); color: var(--fp-danger); }
+    #fieldflow-phone-demo .fp-money-icon svg { height: 13px; width: 13px; }
+    #fieldflow-phone-demo .fp-breakdown-label { color: var(--fp-muted); font-size: 9px; }
+    #fieldflow-phone-demo .fp-breakdown-value { font-size: 13px; font-variant-numeric: tabular-nums; font-weight: 500; margin-top: 2px; }
     #fieldflow-phone-demo .fp-primary {
       align-items: center;
       background: var(--fp-accent);
@@ -1546,23 +1591,34 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;section class=&quot;fp-phone&quot; aria-label=&quot;FieldFlow mobile cash forecast&quot;&gt;
     &lt;div class=&quot;fp-status&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span class=&quot;fp-status-icons&quot;&gt;&lt;i data-lucide=&quot;signal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;i data-lucide=&quot;wifi&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;i data-lucide=&quot;battery-full&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
     &lt;header class=&quot;fp-header&quot;&gt;
-      &lt;div&gt;&lt;div class=&quot;fp-eyebrow&quot;&gt;Red Willow Farm&lt;/div&gt;&lt;h1&gt;Cash outlook&lt;/h1&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;div class=&quot;fp-eyebrow&quot;&gt;Red Willow Farm · This season&lt;/div&gt;&lt;h1&gt;See what’s ahead&lt;/h1&gt;&lt;/div&gt;
       &lt;button class=&quot;fp-icon-button cursor-interaction&quot; id=&quot;fp-settings&quot; type=&quot;button&quot; aria-label=&quot;Edit assumptions&quot;&gt;&lt;i data-lucide=&quot;sliders-horizontal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
     &lt;/header&gt;
 
     &lt;main class=&quot;fp-main&quot;&gt;
       &lt;section class=&quot;fp-alert&quot; aria-live=&quot;polite&quot;&gt;
-        &lt;div class=&quot;fp-alert-top&quot;&gt;&lt;i data-lucide=&quot;triangle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;fp-alert-title&quot; id=&quot;fp-alert-title&quot;&gt;May is your tightest month&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;fp-alert-number&quot; id=&quot;fp-alert-number&quot;&gt;−$281k&lt;/div&gt;
-        &lt;p class=&quot;fp-alert-copy&quot; id=&quot;fp-alert-copy&quot;&gt;Your $150k operating line leaves $131k uncovered.&lt;/p&gt;
+        &lt;div&gt;
+          &lt;div class=&quot;fp-alert-top&quot;&gt;&lt;i data-lucide=&quot;sunset&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;fp-alert-title&quot; id=&quot;fp-alert-title&quot;&gt;Cash may get tight&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;fp-alert-number&quot; id=&quot;fp-alert-number&quot;&gt;May&lt;/div&gt;
+          &lt;p class=&quot;fp-alert-copy&quot; id=&quot;fp-alert-copy&quot;&gt;Plan for the gap before planting bills arrive.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;fp-gap-orbit&quot; aria-label=&quot;Share of the cash gap covered by the operating line&quot;&gt;
+          &lt;div class=&quot;fp-gap-center&quot;&gt;&lt;i data-lucide=&quot;circle-dollar-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;strong id=&quot;fp-gap-number&quot;&gt;$131k&lt;/strong&gt;&lt;span id=&quot;fp-gap-label&quot;&gt;still to cover&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;fp-chart-card&quot; aria-label=&quot;Seasonal cash timeline&quot;&gt;
         &lt;div class=&quot;fp-chart-head&quot;&gt;
-          &lt;div&gt;&lt;h2 class=&quot;fp-section-title&quot;&gt;Season timeline&lt;/h2&gt;&lt;p class=&quot;fp-section-sub&quot;&gt;Month-end cash · $000s&lt;/p&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;h2 class=&quot;fp-section-title&quot;&gt;Your season at a glance&lt;/h2&gt;&lt;p class=&quot;fp-section-sub&quot;&gt;Follow the curve from harvest to harvest&lt;/p&gt;&lt;/div&gt;
           &lt;span class=&quot;fp-badge&quot; id=&quot;fp-first-risk&quot;&gt;Below reserve Dec&lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;fp-chart-wrap&quot;&gt;&lt;svg id=&quot;fp-chart&quot; role=&quot;img&quot; aria-label=&quot;Projected cash from October to September&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;div class=&quot;fp-seasons&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;span class=&quot;fp-season&quot;&gt;&lt;i data-lucide=&quot;leaf&quot;&gt;&lt;/i&gt;Fall&lt;/span&gt;
+          &lt;span class=&quot;fp-season&quot;&gt;&lt;i data-lucide=&quot;snowflake&quot;&gt;&lt;/i&gt;Winter&lt;/span&gt;
+          &lt;span class=&quot;fp-season&quot;&gt;&lt;i data-lucide=&quot;sprout&quot;&gt;&lt;/i&gt;Planting&lt;/span&gt;
+          &lt;span class=&quot;fp-season&quot;&gt;&lt;i data-lucide=&quot;wheat&quot;&gt;&lt;/i&gt;Harvest&lt;/span&gt;
+        &lt;/div&gt;
         &lt;div class=&quot;fp-selected&quot; id=&quot;fp-selected&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
       &lt;/section&gt;
 
@@ -1573,9 +1629,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;/div&gt;
         &lt;hr class=&quot;fp-divider&quot;&gt;
         &lt;div class=&quot;fp-breakdown&quot;&gt;
-          &lt;div&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Receipts&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-receipts&quot;&gt;$70k&lt;/div&gt;&lt;/div&gt;
-          &lt;div&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Inputs&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-input-cost&quot;&gt;$76k&lt;/div&gt;&lt;/div&gt;
-          &lt;div&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Other needs&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-other&quot;&gt;$30k&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;fp-money-block&quot;&gt;&lt;span class=&quot;fp-money-icon&quot;&gt;&lt;i data-lucide=&quot;arrow-down-to-line&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Money coming in&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-receipts&quot;&gt;$70k&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;fp-money-block&quot;&gt;&lt;span class=&quot;fp-money-icon is-out&quot;&gt;&lt;i data-lucide=&quot;tractor&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Farm costs&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-input-cost&quot;&gt;$76k&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;fp-money-block&quot;&gt;&lt;span class=&quot;fp-money-icon is-out&quot;&gt;&lt;i data-lucide=&quot;house&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;div class=&quot;fp-breakdown-label&quot;&gt;Family + loans&lt;/div&gt;&lt;div class=&quot;fp-breakdown-value&quot; id=&quot;fp-other&quot;&gt;$30k&lt;/div&gt;&lt;/div&gt;
         &lt;/div&gt;
       &lt;/section&gt;
 
@@ -1644,17 +1700,21 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function draw(rows) {
         const svg = q(&#x27;#fp-chart&#x27;);
-        const width = Math.max(320, svg.clientWidth || 350), height = 184;
-        const m = { l: 39, r: 15, t: 17, b: 28 }, iw = width - m.l - m.r, ih = height - m.t - m.b;
+        const width = Math.max(320, svg.clientWidth || 350), height = 168;
+        const m = { l: 14, r: 14, t: 16, b: 27 }, iw = width - m.l - m.r, ih = height - m.t - m.b;
         const vals = rows.map(d =&gt; d.cash).concat([reserve, 0]);
         const min = Math.floor((Math.min(...vals) - 25) / 100) * 100, max = Math.ceil((Math.max(...vals) + 25) / 100) * 100;
         const x = i =&gt; m.l + iw * i / 11, y = v =&gt; m.t + (max - v) / (max - min) * ih;
         const points = rows.map((d, i) =&gt; [x(i), y(d.cash)]);
         const path = points.map((p, i) =&gt; `${i ? &#x27;L&#x27; : &#x27;M&#x27;}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(&#x27; &#x27;);
-        const line = color(&#x27;--fp-line&#x27;), muted = color(&#x27;--fp-muted&#x27;), accent = color(&#x27;--fp-accent&#x27;), warning = color(&#x27;--fp-warning&#x27;), danger = color(&#x27;--fp-danger&#x27;), surface = color(&#x27;--fp-surface&#x27;);
-        let h = &#x27;&lt;title&gt;Seasonal cash outlook&lt;/title&gt;&lt;desc&gt;Projected cash drops below the reserve before recovering after harvest receipts.&lt;/desc&gt;&#x27;;
-        [-200,0,200].filter(v =&gt; v &gt;= min &amp;&amp; v &lt;= max).forEach(v =&gt; { h += `&lt;line x1=&quot;${m.l}&quot; x2=&quot;${width-m.r}&quot; y1=&quot;${y(v)}&quot; y2=&quot;${y(v)}&quot; stroke=&quot;${line}&quot;/&gt;&lt;text x=&quot;${m.l-7}&quot; y=&quot;${y(v)+4}&quot; text-anchor=&quot;end&quot; fill=&quot;${muted}&quot; font-size=&quot;10&quot;&gt;${v &lt; 0 ? &#x27;−&#x27; : &#x27;&#x27;}$${Math.abs(v)}&lt;/text&gt;`; });
-        h += `&lt;line x1=&quot;${m.l}&quot; x2=&quot;${width-m.r}&quot; y1=&quot;${y(reserve)}&quot; y2=&quot;${y(reserve)}&quot; stroke=&quot;${warning}&quot; stroke-dasharray=&quot;4 4&quot;/&gt;&lt;path d=&quot;${path}&quot; fill=&quot;none&quot; stroke=&quot;${accent}&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;`;
+        const muted = color(&#x27;--fp-muted&#x27;), accent = color(&#x27;--fp-accent&#x27;), warning = color(&#x27;--fp-warning&#x27;), danger = color(&#x27;--fp-danger&#x27;), surface = color(&#x27;--fp-surface&#x27;), dangerSoft = color(&#x27;--fp-danger-soft&#x27;);
+        const bottom = height - m.b;
+        const area = `M${points[0][0]},${bottom} ${path} L${points[points.length-1][0]},${bottom} Z`;
+        let h = `&lt;title&gt;Seasonal cash outlook&lt;/title&gt;&lt;desc&gt;The cash curve falls below the comfort line during planting and rises again near harvest.&lt;/desc&gt;&lt;defs&gt;&lt;linearGradient id=&quot;fp-area-gradient&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;1&quot;&gt;&lt;stop offset=&quot;0&quot; stop-color=&quot;${accent}&quot; stop-opacity=&quot;.28&quot;/&gt;&lt;stop offset=&quot;1&quot; stop-color=&quot;${danger}&quot; stop-opacity=&quot;.15&quot;/&gt;&lt;/linearGradient&gt;&lt;/defs&gt;`;
+        h += `&lt;rect x=&quot;${m.l}&quot; y=&quot;${y(reserve)}&quot; width=&quot;${iw}&quot; height=&quot;${Math.max(0,bottom-y(reserve))}&quot; rx=&quot;10&quot; fill=&quot;${dangerSoft}&quot; opacity=&quot;.65&quot;/&gt;`;
+        h += `&lt;line x1=&quot;${m.l}&quot; x2=&quot;${width-m.r}&quot; y1=&quot;${y(reserve)}&quot; y2=&quot;${y(reserve)}&quot; stroke=&quot;${warning}&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;5 5&quot;/&gt;&lt;text x=&quot;${width-m.r}&quot; y=&quot;${y(reserve)-6}&quot; text-anchor=&quot;end&quot; fill=&quot;${warning}&quot; font-size=&quot;10&quot;&gt;comfort line&lt;/text&gt;`;
+        h += `&lt;path d=&quot;${area}&quot; fill=&quot;url(#fp-area-gradient)&quot;/&gt;&lt;path d=&quot;${path}&quot; fill=&quot;none&quot; stroke=&quot;${accent}&quot; stroke-width=&quot;4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;`;
+        h += `&lt;line x1=&quot;${x(state.selected)}&quot; x2=&quot;${x(state.selected)}&quot; y1=&quot;${m.t}&quot; y2=&quot;${bottom}&quot; stroke=&quot;${muted}&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;2 5&quot; opacity=&quot;.55&quot;/&gt;`;
         [0,3,6,9,11].forEach(i =&gt; { h += `&lt;text x=&quot;${x(i)}&quot; y=&quot;${height-7}&quot; text-anchor=&quot;${i===0?&#x27;start&#x27;:i===11?&#x27;end&#x27;:&#x27;middle&#x27;}&quot; fill=&quot;${muted}&quot; font-size=&quot;10&quot;&gt;${months[i]}&lt;/text&gt;`; });
         points.forEach((p,i) =&gt; { const c = rows[i].cash &lt; 0 ? danger : rows[i].cash &lt; reserve ? warning : accent; h += `&lt;circle cx=&quot;${p[0]}&quot; cy=&quot;${p[1]}&quot; r=&quot;${i===state.selected?6:4}&quot; fill=&quot;${surface}&quot; stroke=&quot;${c}&quot; stroke-width=&quot;${i===state.selected?3:2}&quot;/&gt;&lt;circle cx=&quot;${p[0]}&quot; cy=&quot;${p[1]}&quot; r=&quot;20&quot; fill=&quot;transparent&quot; data-index=&quot;${i}&quot;/&gt;`; });
         svg.setAttribute(&#x27;viewBox&#x27;, `0 0 ${width} ${height}`); svg.innerHTML = h;
@@ -1670,13 +1730,18 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.style.setProperty(&#x27;--fp-accent&#x27;, design.accent);
         root.querySelector(&#x27;.fp-phone&#x27;).style.setProperty(&#x27;--fp-card-radius&#x27;, design.corners + &#x27;px&#x27;);
         const rows = data(), tight = rows.reduce((a,b) =&gt; a.cash &lt; b.cash ? a : b), first = rows.find(d =&gt; d.cash &lt; reserve), selected = rows[state.selected], uncovered = Math.max(0, -tight.cash - state.credit);
-        q(&#x27;#fp-alert-title&#x27;).textContent = `${tight.month} is your tightest month`;
-        q(&#x27;#fp-alert-number&#x27;).textContent = fmt(tight.cash);
-        q(&#x27;#fp-alert-copy&#x27;).textContent = uncovered ? `Your ${fmt(state.credit)} operating line leaves ${fmt(uncovered)} uncovered.` : `Your ${fmt(state.credit)} operating line covers the timing gap.`;
-        q(&#x27;#fp-first-risk&#x27;).textContent = first ? `Below reserve ${first.month}` : &#x27;Above reserve&#x27;;
-        q(&#x27;#fp-selected&#x27;).innerHTML = `&lt;div&gt;&lt;strong&gt;${selected.month} ending cash&lt;/strong&gt;&lt;span&gt;Tap another point to inspect that month&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;fp-selected-value&quot;&gt;${fmt(selected.cash)}&lt;/div&gt;`;
+        const need = Math.max(0, -tight.cash), covered = Math.min(need, state.credit), coveredPercent = need ? Math.round(covered / need * 100) : 100;
+        q(&#x27;#fp-alert-title&#x27;).textContent = need ? &#x27;Cash may get tight&#x27; : &#x27;Your season looks covered&#x27;;
+        q(&#x27;#fp-alert-number&#x27;).textContent = tight.month;
+        q(&#x27;#fp-alert-copy&#x27;).textContent = need ? &#x27;Planting bills arrive before the biggest crop payment.&#x27; : &#x27;Expected receipts stay ahead of planned needs.&#x27;;
+        q(&#x27;#fp-gap-number&#x27;).textContent = uncovered ? fmt(uncovered) : &#x27;Covered&#x27;;
+        q(&#x27;#fp-gap-label&#x27;).textContent = uncovered ? &#x27;still to cover&#x27; : &#x27;by your line&#x27;;
+        q(&#x27;.fp-gap-orbit&#x27;).style.setProperty(&#x27;--covered&#x27;, coveredPercent + &#x27;%&#x27;);
+        q(&#x27;.fp-gap-orbit&#x27;).setAttribute(&#x27;aria-label&#x27;, `${coveredPercent}% of the projected cash gap is covered by the operating line`);
+        q(&#x27;#fp-first-risk&#x27;).textContent = first ? `Watch from ${first.month}` : &#x27;All clear&#x27;;
+        q(&#x27;#fp-selected&#x27;).innerHTML = `&lt;div&gt;&lt;strong&gt;${selected.month}: cash after bills&lt;/strong&gt;&lt;span&gt;Tap a dot to check another month&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;fp-selected-value&quot;&gt;${fmt(selected.cash)}&lt;/div&gt;`;
         q(&#x27;#fp-month-name&#x27;).textContent = `${selected.month} detail`;
-        q(&#x27;#fp-month-note&#x27;).textContent = selected.month === &#x27;May&#x27; &amp;&amp; state.delay ? &#x27;Grain receipt delayed to a later month&#x27; : selected.net &lt; 0 ? &#x27;Cash needs exceed receipts&#x27; : &#x27;Receipts rebuild cash&#x27;;
+        q(&#x27;#fp-month-note&#x27;).textContent = selected.month === &#x27;May&#x27; &amp;&amp; state.delay ? &#x27;Crop payment is expected later&#x27; : selected.net &lt; 0 ? &#x27;More going out than coming in&#x27; : &#x27;Cash begins to rebuild&#x27;;
         q(&#x27;#fp-net&#x27;).textContent = fmt(selected.net, true); q(&#x27;#fp-receipts&#x27;).textContent = fmt(selected.receipts); q(&#x27;#fp-input-cost&#x27;).textContent = fmt(selected.input); q(&#x27;#fp-other&#x27;).textContent = fmt(selected.other);
         q(&#x27;#fp-delay&#x27;).value = state.delay; q(&#x27;#fp-cost&#x27;).value = state.inputChange; q(&#x27;#fp-credit&#x27;).value = state.credit;
         q(&#x27;#fp-delay-value&#x27;).textContent = state.delay + &#x27; days&#x27;; q(&#x27;#fp-cost-value&#x27;).textContent = (state.inputChange &gt;= 0 ? &#x27;+&#x27; : &#x27;&#x27;) + state.inputChange + &#x27;%&#x27;; q(&#x27;#fp-credit-value&#x27;).textContent = fmt(state.credit);
